@@ -3,8 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Race IAT</title>
+
+  <!-- Load jQuery -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+  <!-- Load RequireJS -->
   <script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js"></script>
+
+  <!-- Load pipAPI (MinnoJS base) -->
+  <script src="https://cdn.jsdelivr.net/npm/pipapi@0.3.2/dist/pipAPI.min.js"></script>
 </head>
 <body>
   <h2 style="text-align:center;">Race Implicit Association Test (IAT)</h2>
@@ -12,7 +19,7 @@
 
   <script>
     require.config({
-        baseUrl: '.'
+      baseUrl: '.'
     });
 
     require(['iat6.js'], function(iatExtension){
@@ -56,3 +63,22 @@
                     { word: 'Wonderful' }
                 ]
             },
+            attribute2: {
+                name: 'Bad',
+                title: {
+                    media: { word: 'Bad' },
+                    css: { color: '#0000FF', 'font-size': '2em' }
+                },
+                stimulusMedia: [
+                    { word: 'Horrible' },
+                    { word: 'Evil' },
+                    { word: 'Failure' },
+                    { word: 'Awful' }
+                ]
+            }
+        });
+    });
+  </script>
+</body>
+</html>
+
