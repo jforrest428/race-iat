@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Race IAT</title>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js"></script>
+</head>
+<body>
+  <h2 style="text-align:center;">Race Implicit Association Test (IAT)</h2>
+  <div id="minno_container"></div>
+
+  <script>
+    require.config({
+        baseUrl: '.'
+    });
+
+    require(['iat6.js'], function(iatExtension){
+        return iatExtension({
+            category1: {
+                name: 'Black people',
+                title: {
+                    media: { word: 'Black people' },
+                    css: { color: '#31b404', 'font-size': '2em' }
+                },
+                stimulusMedia: [
+                    { word: 'Tyrone' },
+                    { word: 'Malik' },
+                    { word: 'Latisha' },
+                    { word: 'Jamal' }
+                ]
+            },
+            category2: {
+                name: 'White people',
+                title: {
+                    media: { word: 'White people' },
+                    css: { color: '#31b404', 'font-size': '2em' }
+                },
+                stimulusMedia: [
+                    { word: 'Emily' },
+                    { word: 'Greg' },
+                    { word: 'Molly' },
+                    { word: 'Jake' }
+                ]
+            },
+            attribute1: {
+                name: 'Good',
+                title: {
+                    media: { word: 'Good' },
+                    css: { color: '#0000FF', 'font-size': '2em' }
+                },
+                stimulusMedia: [
+                    { word: 'Joy' },
+                    { word: 'Love' },
+                    { word: 'Peace' },
+                    { word: 'Wonderful' }
+                ]
+            },
