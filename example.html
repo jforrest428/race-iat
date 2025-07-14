@@ -23,64 +23,69 @@
       paths: {
         pipScorer: 'https://cdn.jsdelivr.net/npm/pipscorer@0.1.0/dist/pipScorer.min',
         underscore: 'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min'
+      },
+      shim: {
+        underscore: {
+          exports: '_'
+        }
       }
     });
 
     require(['iat6.js'], function(iatExtension){
-      return iatExtension({
-        category1: {
-          name: 'Black people',
-          title: {
-            media: { word: 'Black people' },
-            css: { color: '#31b404', 'font-size': '2em' }
-          },
-          stimulusMedia: [
-            { word: 'Tyrone' },
-            { word: 'Malik' },
-            { word: 'Latisha' },
-            { word: 'Jamal' }
-          ]
-        },
-        category2: {
-          name: 'White people',
-          title: {
-            media: { word: 'White people' },
-            css: { color: '#31b404', 'font-size': '2em' }
-          },
-          stimulusMedia: [
-            { word: 'Emily' },
-            { word: 'Greg' },
-            { word: 'Molly' },
-            { word: 'Jake' }
-          ]
-        },
-        attribute1: {
-          name: 'Good',
-          title: {
-            media: { word: 'Good' },
-            css: { color: '#0000FF', 'font-size': '2em' }
-          },
-          stimulusMedia: [
-            { word: 'Joy' },
-            { word: 'Love' },
-            { word: 'Peace' },
-            { word: 'Wonderful' }
-          ]
-        },
-        attribute2: {
-          name: 'Bad',
-          title: {
-            media: { word: 'Bad' },
-            css: { color: '#0000FF', 'font-size': '2em' }
-          },
-          stimulusMedia: [
-            { word: 'Horrible' },
-            { word: 'Evil' },
-            { word: 'Failure' },
-            { word: 'Awful' }
-          ]
-        }
-      });
+        return iatExtension({
+            category1: {
+                name: 'Black people',
+                title: {
+                    media: { word: 'Black people' },
+                    css: { color: '#31b404', 'font-size': '2em' }
+                },
+                stimulusMedia: [
+                    { word: 'Tyrone' },
+                    { word: 'Malik' },
+                    { word: 'Latisha' },
+                    { word: 'Jamal' }
+                ]
+            },
+            category2: {
+                name: 'White people',
+                title: {
+                    media: { word: 'White people' },
+                    css: { color: '#31b404', 'font-size': '2em' }
+                },
+                stimulusMedia: [
+                    { word: 'Emily' },
+                    { word: 'Greg' },
+                    { word: 'Molly' },
+                    { word: 'Jake' }
+                ]
+            },
+            attribute1: {
+                name: 'Good',
+                title: {
+                    media: { word: 'Good' },
+                    css: { color: '#0000FF', 'font-size': '2em' }
+                },
+                stimulusMedia: [
+                    { word: 'Joy' },
+                    { word: 'Love' },
+                    { word: 'Peace' },
+                    { word: 'Wonderful' }
+                ]
+            },
+            attribute2: {
+                name: 'Bad',
+                title: {
+                    media: { word: 'Bad' },
+                    css: { color: '#0000FF', 'font-size': '2em' }
+                },
+                stimulusMedia: [
+                    { word: 'Horrible' },
+                    { word: 'Evil' },
+                    { word: 'Failure' },
+                    { word: 'Awful' }
+                ]
+            }
+        });
     });
   </script>
 </body>
